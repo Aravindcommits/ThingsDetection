@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreMLDetecion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +19,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-Je-ihP">
+                                <rect key="frame" x="150" y="104" width="75" height="30"/>
+                                <state key="normal" title="Pick Image"/>
+                                <connections>
+                                    <action selector="pickImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOy-pw-YlY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picked Image :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIf-8L-RkM">
+                                <rect key="frame" x="132" y="169" width="112" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UfF-2F-k1H">
+                                <rect key="frame" x="68" y="218" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="U4F-zA-NRg"/>
+                                    <constraint firstAttribute="width" constant="240" id="hY0-6Y-tMh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGS-Hg-lRH" userLabel="Image Description">
+                                <rect key="frame" x="10" y="405" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l3I-Je-ihP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="2BS-Yw-XD1"/>
+                            <constraint firstItem="JGS-Hg-lRH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="DY9-sI-xly"/>
+                            <constraint firstItem="l3I-Je-ihP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KI1-5p-6dT"/>
+                            <constraint firstItem="JGS-Hg-lRH" firstAttribute="top" secondItem="UfF-2F-k1H" secondAttribute="bottom" constant="59" id="LR7-jm-i7K"/>
+                            <constraint firstItem="vIf-8L-RkM" firstAttribute="centerX" secondItem="l3I-Je-ihP" secondAttribute="centerX" id="Lrw-kv-wqc"/>
+                            <constraint firstItem="JGS-Hg-lRH" firstAttribute="centerX" secondItem="UfF-2F-k1H" secondAttribute="centerX" id="NRX-Iy-DyT"/>
+                            <constraint firstItem="UfF-2F-k1H" firstAttribute="top" secondItem="vIf-8L-RkM" secondAttribute="bottom" constant="28" id="YwX-F1-KJm"/>
+                            <constraint firstAttribute="trailing" secondItem="JGS-Hg-lRH" secondAttribute="trailing" constant="10" id="g8S-Zw-5Ag"/>
+                            <constraint firstItem="vIf-8L-RkM" firstAttribute="top" secondItem="l3I-Je-ihP" secondAttribute="bottom" constant="35" id="w4O-34-ECP"/>
+                            <constraint firstItem="UfF-2F-k1H" firstAttribute="centerX" secondItem="vIf-8L-RkM" secondAttribute="centerX" id="ySX-uW-Jsz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageDescription" destination="JGS-Hg-lRH" id="BdS-GA-q2m"/>
+                        <outlet property="pickedImageView" destination="UfF-2F-k1H" id="blV-Nh-9wT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

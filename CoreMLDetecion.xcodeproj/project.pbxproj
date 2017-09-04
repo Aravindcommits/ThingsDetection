@@ -12,6 +12,7 @@
 		F2B8D7471F5D4DC0006595BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B8D7451F5D4DC0006595BB /* Main.storyboard */; };
 		F2B8D7491F5D4DC0006595BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B8D7481F5D4DC0006595BB /* Assets.xcassets */; };
 		F2B8D74C1F5D4DC0006595BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B8D74A1F5D4DC0006595BB /* LaunchScreen.storyboard */; };
+		F2B8D7541F5D5536006595BB /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F2B8D7531F5D5535006595BB /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F2B8D7481F5D4DC0006595BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2B8D74B1F5D4DC0006595BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2B8D74D1F5D4DC0006595BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B8D7531F5D5535006595BB /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = ../../../../../../Users/aravind/Downloads/MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				F2B8D7481F5D4DC0006595BB /* Assets.xcassets */,
 				F2B8D74A1F5D4DC0006595BB /* LaunchScreen.storyboard */,
 				F2B8D74D1F5D4DC0006595BB /* Info.plist */,
+				F2B8D7531F5D5535006595BB /* MobileNet.mlmodel */,
 			);
 			path = CoreMLDetecion;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				F2B8D7441F5D4DC0006595BB /* ViewController.swift in Sources */,
 				F2B8D7421F5D4DC0006595BB /* AppDelegate.swift in Sources */,
+				F2B8D7541F5D5536006595BB /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
